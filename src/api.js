@@ -30,7 +30,7 @@ router.get("/playlists/top/:limit", (req, res) => {
 });
 
 // One playlist
-router.get("/api/playlists/:id", (req, res) => {
+router.get("/playlists/:id", (req, res) => {
   fetch("https://api.deezer.com/playlist/" + req.params.id, {})
     .then((data) => data.json())
     .then((json) => {
